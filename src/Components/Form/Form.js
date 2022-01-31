@@ -9,6 +9,10 @@ class ContactForm extends Component {
     number: "",
   };
 
+  static defaultProps = {
+    onSubmit: PropTypes.func,
+  };
+
   nameId = nanoid();
   phoneId = nanoid();
 
@@ -62,7 +66,3 @@ class ContactForm extends Component {
 }
 
 export default ContactForm;
-
-Form.propTypes = {
-  onSubmit: PropTypes.func,
-};
